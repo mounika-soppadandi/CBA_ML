@@ -37,9 +37,9 @@ def segment_customers(input_data):
 def main():
     st.image("""https://d3caycb064h6u1.cloudfront.net/wp-content/uploads/2021/08/customerbehavior-scaled.jpg""")
     
-    Income = st.text_input("Enter Household Income")
+    Income = st.text_input("Enter Household Income 5 digitnumber")
     Children = st.radio ( "Select Number Of Kids In Household", ('0', '1','2','3') )
-    Month_Customer = st.text_input( "Enter the number of months customers are affiliated with the company ")
+    Month_Customer = st.text_input( "Enter the number of months customer affiliated with the company ")
     Age = st.slider ( "Select Age", 18, 85 )
     TotalSpendings= st.text_input( "Enter TotalSpendings")
     
