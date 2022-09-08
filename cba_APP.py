@@ -25,29 +25,29 @@ def segment_customers(input_data):
     print(prediction)
     pred_1 = 0
     if prediction == 0:
-            pred_1 = 'High'
+            pred_1 = 'Highly Active Customer'
 
     elif prediction == 1:
-            pred_1 = 'Modarate'
+            pred_1 = 'Moderately Active Customer'
 
     elif prediction == 2:
-            pred_1 = 'Low'
+            pred_1 = 'Least Active Customer'
 
     return pred_1
 def main():
-    st.image("""https://d2s30hray1l0uq.cloudfront.net/frontend/xWcdySUP-Untitled-design-8.jpg""")
+    st.image("""https://d3caycb064h6u1.cloudfront.net/wp-content/uploads/2021/08/customerbehavior-scaled.jpg""")
     
-    Income = st.text_input("Type In The Household Income")
+    Income = st.text_input("Enter Household Income")
     Children = st.radio ( "Select Number Of Kids In Household", ('0', '1','2','3') )
-    Month_Customer = st.text_input( "Month")
+    Month_Customer = st.text_input( "Enter the number of months customers are affiliated with the company ")
     Age = st.slider ( "Select Age", 18, 85 )
-    TotalSpendings= st.text_input( "TotalSpendings")
+    TotalSpendings= st.text_input( "Enter TotalSpendings")
     
     
     result = ""
 
     # when 'Predict' is clicked, make the prediction and store it
-    if st.button("Customer"):
+    if st.button("Analyze Customer"):
         result=segment_customers([[Income,Age,Month_Customer,TotalSpendings,Children]])
     
     st.success(result)
@@ -55,32 +55,6 @@ if __name__ == '__main__':
         main ()
 
 
-
-# In[ ]:
-
-
-
-
-
-# In[15]:
-
-
-
-
-
-# In[16]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
 
 
 
